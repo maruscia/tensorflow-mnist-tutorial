@@ -178,10 +178,10 @@ class MnistDataVis:
 
         self.__set_title(ax1, title1, default="Accuracy")
         self.__set_title(ax2, title2, default="Cross entropy loss")
-        self.__set_title(ax3, title3, default="Training digits")
-        self.__set_title(ax4, title4, default="Weights")
-        self.__set_title(ax5, title5, default="Biases")
-        self.__set_title(ax6, title6, default="Test digits")
+        self.__set_title(ax3, title3, default="Training images (current batch)")
+        self.__set_title(ax4, title4, default="Weights range")
+        self.__set_title(ax5, title5, default="Biases range")
+        self.__set_title(ax6, title6, default="Test images")
 
         #ax1.set_figaspect(1.0)
 
