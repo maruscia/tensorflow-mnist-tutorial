@@ -120,3 +120,19 @@ datavis.animate(training_step, iterations=2000+1, train_data_update_freq=10, tes
 print("max test accuracy: " + str(datavis.get_max_test_accuracy()))
 
 # final max test accuracy = 0.9268 (10K iterations). Accuracy should peak above 0.92 in the first 2000 iterations.
+
+
+#Visualize learned weights:
+import matplotlib.pyplot as plt
+weights_viz = sess.run(tf.reshape(allweights,[784,10]))
+
+f, axes = plt.subplots(2, 5, figsize=(10,4))
+axes = axes.reshape(-1)
+for i in range(len(axes)):
+    a = axes[i]
+    a.imshow(weights_viz[:,i].reshape(28, 28), cmap=plt.cm.seismic)
+    a.set_title("W"+str(i))
+    a.set_xticks(()) # ticks be gone
+    a.set_yticks(())
+
+plt.show()
